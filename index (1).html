@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of Hachalu Roba - Oromo Digital Content Creator, TikTok Creator, and YouTuber. Explore educational, motivational, and informative videos.">
+    <title>Hachalu Roba | Official Digital Creator Website</title>
+    <!-- Google Fonts: Inter & Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0F',
+                            dark: '#12121A',
+                            blue: '#4F46E5',
+                            purple: '#9333EA',
+                            cyan: '#06B6D4',
+                            oromoRed: '#FF2A2A',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 10px rgba(147, 51, 234, 0.3), 0 0 20px rgba(79, 70, 229, 0.2)' },
+                            '100%': { boxShadow: '0 0 25px rgba(147, 51, 234, 0.6), 0 0 40px rgba(6, 182, 212, 0.4)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #312E81;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4F46E5;
+        }
+        
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(18, 18, 26, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(147, 51, 234, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(147, 51, 234, 0.3);
+            transform: translateY(-4px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Glowing Text effect */
+        .text-glow-cyan {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+        }
+        .text-glow-purple {
+            text-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-slate-100 font-sans overflow-x-hidden antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <!-- Odaa Tree Inspired Icon (Stylized Abstract SVG for Premium Feel) -->
+                <div class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-brand-blue to-brand-purple p-[1px] group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-brand-black rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-brand-cyan group-hover:text-brand-purple transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v18M12 9c2-2 5-2 5 0s-3 4-5 6M12 9c-2-2-5-2-5 0s3 4 5 6M8 21h8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold font-display tracking-wider text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-purple transition-all duration-300">HACHALU ROBA</span>
+                    <span class="text-[9px] uppercase tracking-[0.2em] text-slate-400">Digital Creator</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">Home<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+                <a href="#about" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">About Me<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+                <a href="#videos" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">My Videos<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+                <a href="#social" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">Social Media<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+                <a href="#gallery" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">Gallery<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+                <a href="#contact" class="text-sm font-medium hover:text-brand-cyan transition-colors py-2 relative group">Contact<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-cyan group-hover:w-full transition-all duration-300"></span></a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/20 active:scale-95 duration-150 block">Get In Touch</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="md:hidden text-white hover:text-brand-cyan focus:outline-none" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Full Screen Navigation Menu -->
+        <div class="hidden md:hidden glass-panel border-t border-white/5 transition-all duration-300" id="mobile-menu">
+            <div class="px-4 pt-4 pb-8 space-y-4">
+                <a href="#home" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">Home</a>
+                <a href="#about" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">About Me</a>
+                <a href="#videos" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">My Videos</a>
+                <a href="#social" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">Social Media</a>
+                <a href="#gallery" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">Gallery</a>
+                <a href="#contact" class="block px-4 py-3 rounded-xl hover:bg-white/5 text-base font-medium transition-colors">Contact</a>
+                <div class="pt-4 px-4">
+                    <a href="#contact" class="w-full text-center py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase text-white bg-gradient-to-r from-brand-blue to-brand-purple hover:scale-[1.02] active:scale-95 transition-all block">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interactive Glow & Background Effects -->
+    <div class="absolute top-0 left-0 w-full h-[100vh] overflow-hidden pointer-events-none z-0">
+        <!-- Interactive Canvas Background -->
+        <canvas id="particleCanvas" class="absolute inset-0 opacity-40"></canvas>
+        <!-- Large colorful gradients -->
+        <div class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-brand-blue/20 blur-[150px] animate-pulse-slow"></div>
+        <div class="absolute top-[40%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-purple/15 blur-[120px] animate-pulse-slow" style="animation-delay: 2s"></div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <main class="relative z-10">
+
+        <!-- Home / Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content: Title, subtitle, introduction -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full self-center lg:self-start hover:border-brand-cyan/40 transition-colors duration-300">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-cyan animate-ping"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-cyan absolute"></span>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-brand-cyan">ONLINE PORTFOLIO</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] text-white">
+                        Welcome to the <br class="hidden sm:inline">
+                        Official Website of <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple text-glow-purple">HACHALU ROBA</span>
+                    </h1>
+
+                    <p class="text-md sm:text-lg font-bold uppercase tracking-wider text-slate-300/95 font-display flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-1">
+                        <span class="hover:text-brand-cyan transition-colors">TikTok Creator</span>
+                        <span class="text-brand-purple">•</span>
+                        <span class="hover:text-brand-purple transition-colors">YouTuber</span>
+                        <span class="text-brand-purple">•</span>
+                        <span class="hover:text-brand-cyan transition-colors">Digital Content Creator</span>
+                        <span class="text-brand-purple">•</span>
+                        <span class="hover:text-brand-purple transition-colors">Oromo Creator</span>
+                    </p>
+
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-brand-purple/30 transition-all duration-300">
+                        <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-brand-cyan to-brand-purple"></div>
+                        <p class="text-slate-300 leading-relaxed text-base sm:text-lg pl-4">
+                            "Hello! I'm <span class="font-semibold text-white">HACHALU ROBA</span>, an Oromo digital content creator. I create educational, entertainment, motivational, and informative videos for audiences around the world. Welcome to my official website and thank you for your support."
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#videos" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold tracking-wide text-white bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play-circle text-lg"></i> Watch My Videos
+                        </a>
+                        <a href="#social" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold tracking-wide text-slate-300 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> Connect With Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content: Premium Creative Digital Space Mockup with Live Image -->
+                <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
+                    <div class="relative w-full max-w-[400px] aspect-square rounded-full flex items-center justify-center animate-float">
+                        <!-- Neon Circle Glow Backgrounds -->
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-cyan/20 to-brand-purple/20 blur-xl"></div>
+                        <div class="absolute w-[90%] h-[90%] rounded-full border border-white/5 bg-slate-900/60 flex items-center justify-center overflow-hidden">
+                            
+                            <!-- Inside circles representing content hubs -->
+                            <div class="absolute w-[95%] h-[95%] rounded-full border border-dashed border-brand-cyan/30 animate-[spin_60s_linear_infinite]"></div>
+                            
+                            <!-- Central Graphic: Live Portrait of Hachalu Roba framed beautifully -->
+                            <div class="relative z-10 w-[78%] h-[78%] rounded-full p-[3px] bg-gradient-to-tr from-brand-cyan via-brand-blue to-brand-purple shadow-2xl">
+                                <div class="w-full h-full rounded-full overflow-hidden bg-brand-black">
+                                    <img src="Snapchat-1341961178.jpg" alt="Hachalu Roba Portrait" class="w-full h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orbiting Social Platforms Badges -->
+                        <a href="https://www.tiktok.com/@hachaluroba123" target="_blank" rel="noopener" class="absolute top-4 left-4 bg-brand-black/90 hover:bg-white/10 hover:text-brand-cyan border border-white/10 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform cursor-pointer z-20" title="TikTok">
+                            <i class="fa-brands fa-tiktok text-2xl text-white"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@hachaluroba" target="_blank" rel="noopener" class="absolute bottom-6 left-2 bg-brand-black/90 hover:bg-white/10 hover:text-brand-cyan border border-white/10 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform cursor-pointer z-20" title="YouTube">
+                            <i class="fa-brands fa-youtube text-2xl text-[#FF0000]"></i>
+                        </a>
+                        <a href="https://t.me/hachalu122" target="_blank" rel="noopener" class="absolute top-1/3 -right-2 bg-brand-black/90 hover:bg-white/10 hover:text-brand-cyan border border-white/10 p-3 rounded-xl shadow-lg hover:scale-110 transition-transform cursor-pointer z-20" title="Telegram">
+                            <i class="fa-brands fa-telegram text-2xl text-[#26A5E4]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Down arrow indicator -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <span class="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-2">Explore</span>
+                <a href="#about" class="w-8 h-12 rounded-full border-2 border-slate-500/30 flex justify-center pt-2 hover:border-brand-cyan transition-colors">
+                    <span class="w-1.5 h-3 bg-brand-cyan rounded-full animate-bounce"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative bg-slate-950/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">DISCOVER THE STORY</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-display text-white">About Hachalu Roba</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Left Side: Interactive Creator Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Creator Bio Graphic Element -->
+                        <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+                            <!-- Background glow -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue/5 to-transparent pointer-events-none"></div>
+                            
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center p-[2px] overflow-hidden">
+                                    <!-- Beautiful photo of Hachalu Roba -->
+                                    <img src="Snapchat-1341961178.jpg" alt="Hachalu Roba" class="w-full h-full object-cover rounded-full">
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">HACHALU ROBA</h3>
+                                    <span class="text-xs text-brand-cyan uppercase tracking-widest">Oromo Digital Creator</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
+                                Based on a deep-rooted passion for digital media and community growth, my content revolves around creating informative videos, promoting Oromo culture, and motivating youth worldwide.
+                            </p>
+                            <p class="text-slate-400 leading-relaxed text-sm">
+                                Empowered by our community's voices, I use TikTok, YouTube, and Telegram as dynamic ecosystems for active communication, high-impact storytelling, and continuous learning.
+                            </p>
+                        </div>
+
+                        <!-- Statistics Counter (Mocked for premium engagement) -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="glass-panel p-4 rounded-xl text-center">
+                                <span class="block text-2xl sm:text-3xl font-bold font-display text-white">100K+</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Followers</span>
+                            </div>
+                            <div class="glass-panel p-4 rounded-xl text-center">
+                                <span class="block text-2xl sm:text-3xl font-bold font-display text-white">2M+</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Likes/Views</span>
+                            </div>
+                            <div class="glass-panel p-4 rounded-xl text-center">
+                                <span class="block text-2xl sm:text-3xl font-bold font-display text-white">500+</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Videos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Beautiful Biography, Mission, Vision & Journey tabs -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="glass-panel p-8 rounded-3xl relative">
+                            <!-- Premium Tabs Button Navigation -->
+                            <div class="flex flex-wrap gap-2 border-b border-white/5 pb-4 mb-6">
+                                <button onclick="switchTab('tab-bio')" id="btn-tab-bio" class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-md">
+                                    <i class="fa-solid fa-scroll mr-1.5"></i> Biography
+                                </button>
+                                <button onclick="switchTab('tab-mission')" id="btn-tab-mission" class="px-5 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-300">
+                                    <i class="fa-solid fa-bullseye mr-1.5"></i> Mission
+                                </button>
+                                <button onclick="switchTab('tab-vision')" id="btn-tab-vision" class="px-5 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-300">
+                                    <i class="fa-solid fa-eye mr-1.5"></i> Vision
+                                </button>
+                                <button onclick="switchTab('tab-journey')" id="btn-tab-journey" class="px-5 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-300">
+                                    <i class="fa-solid fa-route mr-1.5"></i> Journey
+                                </button>
+                            </div>
+
+                            <!-- Tab Contents -->
+                            <!-- Biography Content -->
+                            <div id="tab-bio" class="about-tab-content space-y-4">
+                                <h4 class="text-xl font-bold text-white font-display">A Dedicated Content Creator</h4>
+                                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                                    Hachalu Roba is an Oromo content producer whose core objective is to deliver excellent digital programming to diverse international audiences. Through highly engaging, insightful, and accessible visual storytelling formats, Hachalu acts as a dynamic bridge across various educational and social networks.
+                                </p>
+                                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                                    Known for a signature blend of motivational content and educational pieces, Hachalu works tirelessly to uplift spirits, promote social accountability, and provide valuable knowledge outputs to the digital ecosystem.
+                                </p>
+                            </div>
+
+                            <!-- Mission Content -->
+                            <div id="tab-mission" class="about-tab-content hidden space-y-4">
+                                <h4 class="text-xl font-bold text-white font-display">My Mission</h4>
+                                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                                    My fundamental mission is to design and share premium-grade digital media content that educates, elevates, and inspires audiences globally. I am committed to producing material that encourages personal development, celebrates heritage, and spreads positivity.
+                                </p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                                    <div class="flex items-start space-x-3 bg-white/5 p-3.5 rounded-xl border border-white/5">
+                                        <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                        <span class="text-sm text-slate-300">Inspire next-generation creators.</span>
+                                    </div>
+                                    <div class="flex items-start space-x-3 bg-white/5 p-3.5 rounded-xl border border-white/5">
+                                        <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                        <span class="text-sm text-slate-300">Develop educational insights.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vision Content -->
+                            <div id="tab-vision" class="about-tab-content hidden space-y-4">
+                                <h4 class="text-xl font-bold text-white font-display">My Vision</h4>
+                                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                                    I envision a interconnected digital atmosphere where modern media functions as an active force for unity, educational growth, and healthy creative expression. I seek to leverage digital tools to elevate our unique cultural narratives while shaping a modern global presence.
+                                </p>
+                                <blockquote class="border-l-4 border-brand-purple pl-4 italic text-slate-400 text-sm">
+                                    "Leveraging modern innovation to broadcast educational truths and powerful motivational insights to communities regardless of boundary lines."
+                                </blockquote>
+                            </div>
+
+                            <!-- Journey Content -->
+                            <div id="tab-journey" class="about-tab-content hidden space-y-4">
+                                <h4 class="text-xl font-bold text-white font-display">My Digital Journey</h4>
+                                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                                    From humble beginnings experimenting with mobile video recordings to establishing thriving multi-platform digital footprints on TikTok, YouTube, and Telegram, my journey represents consistency, adaptability, and local pride.
+                                </p>
+                                <div class="relative border-l border-slate-700 pl-4 ml-2 space-y-4 pt-2">
+                                    <div class="relative">
+                                        <span class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-brand-cyan"></span>
+                                        <p class="text-xs font-semibold text-brand-cyan">Phase 1: Spark of Content</p>
+                                        <p class="text-sm text-slate-300">Initiated visual formats with cultural & community focus.</p>
+                                    </div>
+                                    <div class="relative">
+                                        <span class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-brand-purple"></span>
+                                        <p class="text-xs font-semibold text-brand-purple">Phase 2: Platform Scaling</p>
+                                        <p class="text-sm text-slate-300">Achieved massive engagement on TikTok and YouTube via consistent uploads.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Videos Section -->
+        <section id="videos" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">WATCH MY CONTENT</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold font-display text-white">Modern Video Gallery</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Beautiful Youtube Embedded Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Video Card 1 -->
+                <div class="glass-panel rounded-2xl overflow-hidden glass-panel-hover group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <!-- Simulated Premium Graphic Thumbnail representing Creator Work -->
+                        <img src="https://placehold.co/600x400/12121a/4F46E5?text=Hachalu+Roba+Educational" alt="Educational Video Thumbnail" onerror="this.src='https://placehold.co/600x400/1e1b4b/9333ea?text=Video+Presentation'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                            <!-- Premium Custom Play Button -->
+                            <button onclick="playMockVideo('Educational Mastery Series', 'https://www.youtube.com/@hachaluroba')" class="w-16 h-16 rounded-full bg-brand-cyan/90 text-brand-black flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200 shadow-xl group-hover:bg-brand-purple group-hover:text-white" aria-label="Play video">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </button>
+                        </div>
+                        <span class="absolute bottom-2 right-2 bg-brand-black/90 px-2 py-1 rounded text-xs font-medium">10:14</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-xs text-brand-cyan font-bold uppercase tracking-wider mb-2">
+                            <span>Educational</span>
+                            <span>•</span>
+                            <span>15K+ Views</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-display mb-2 group-hover:text-brand-cyan transition-colors">Empowering Youth Through Digital Education</h3>
+                        <p class="text-slate-400 text-sm">Discover step-by-step concepts to optimize digital channels for direct, positive social action and influence.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="glass-panel rounded-2xl overflow-hidden glass-panel-hover group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://placehold.co/600x400/12121a/9333EA?text=Hachalu+Roba+Motivational" alt="Motivational Video Thumbnail" onerror="this.src='https://placehold.co/600x400/1e1b4b/4f46e5?text=Video+Presentation'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                            <button onclick="playMockVideo('Oromo Youth Motivation', 'https://www.youtube.com/@hachaluroba')" class="w-16 h-16 rounded-full bg-brand-cyan/90 text-brand-black flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200 shadow-xl group-hover:bg-brand-purple group-hover:text-white" aria-label="Play video">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </button>
+                        </div>
+                        <span class="absolute bottom-2 right-2 bg-brand-black/90 px-2 py-1 rounded text-xs font-medium">08:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-xs text-brand-purple font-bold uppercase tracking-wider mb-2">
+                            <span>Motivational</span>
+                            <span>•</span>
+                            <span>28K+ Views</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-display mb-2 group-hover:text-brand-purple transition-colors">Fueling Passion and Ambition Daily</h3>
+                        <p class="text-slate-400 text-sm">Key guidelines to unlock peak creativity, cultivate deep self-discipline, and structure your long-term success path.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="glass-panel rounded-2xl overflow-hidden glass-panel-hover group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://placehold.co/600x400/12121a/06B6D4?text=Hachalu+Roba+Informative" alt="Informative Video Thumbnail" onerror="this.src='https://placehold.co/600x400/1e1b4b/06b6d4?text=Video+Presentation'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                            <button onclick="playMockVideo('Modern Oromo Content Creation Trends', 'https://www.youtube.com/@hachaluroba')" class="w-16 h-16 rounded-full bg-brand-cyan/90 text-brand-black flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200 shadow-xl group-hover:bg-brand-purple group-hover:text-white" aria-label="Play video">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </button>
+                        </div>
+                        <span class="absolute bottom-2 right-2 bg-brand-black/90 px-2 py-1 rounded text-xs font-medium">12:30</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-xs text-brand-cyan font-bold uppercase tracking-wider mb-2">
+                            <span>Informative</span>
+                            <span>•</span>
+                            <span>35K+ Views</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-display mb-2 group-hover:text-brand-cyan transition-colors">The Future of Content Creation</h3>
+                        <p class="text-slate-400 text-sm">Explore how emerging digital tools, algorithms, and media pipelines influence the broader world of content generation.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- YouTube Redirection Block -->
+            <div class="mt-12 text-center">
+                <a href="https://www.youtube.com/@hachaluroba" target="_blank" rel="noopener" class="inline-flex items-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-red-600/35 transition-transform duration-200 hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-youtube text-2xl"></i>
+                    <span>Visit My YouTube Channel</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Mock Video Player Modal -->
+        <div id="videoModal" class="fixed inset-0 bg-brand-black/90 z-[100] hidden flex items-center justify-center p-4">
+            <div class="bg-brand-dark border border-white/10 max-w-3xl w-full rounded-2xl overflow-hidden relative shadow-2xl">
+                <!-- Close Button -->
+                <button onclick="closeVideoMock()" class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-2.5 z-50 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <div class="p-8">
+                    <h3 id="modalVideoTitle" class="text-xl sm:text-2xl font-bold text-white mb-4">Video Title</h3>
+                    <div class="aspect-video bg-black rounded-xl overflow-hidden relative flex flex-col justify-between p-6">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50 z-10 pointer-events-none"></div>
+                        
+                        <!-- Premium Simulated Player Skin UI -->
+                        <div class="relative z-20 flex justify-between items-center text-slate-300 text-sm">
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-satellite-dish text-red-500 animate-pulse"></i> SIMULATOR ACTIVE</span>
+                            <span class="bg-brand-purple/70 px-2 py-0.5 rounded text-xs font-semibold text-white">1080p HD</span>
+                        </div>
+
+                        <!-- Center Play/Buffer Icon -->
+                        <div class="flex items-center justify-center my-auto relative z-20">
+                            <div class="w-16 h-16 rounded-full bg-brand-blue/80 flex items-center justify-center text-white text-2xl animate-pulse">
+                                <i class="fa-solid fa-spinner animate-spin"></i>
+                            </div>
+                        </div>
+
+                        <div class="relative z-20 space-y-3">
+                            <!-- Progress Bar -->
+                            <div class="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                                <div class="w-[45%] h-full bg-brand-cyan rounded-full"></div>
+                            </div>
+                            <!-- Controls Row -->
+                            <div class="flex items-center justify-between text-white text-sm">
+                                <div class="flex items-center space-x-4">
+                                    <i class="fa-solid fa-play hover:text-brand-cyan cursor-pointer"></i>
+                                    <i class="fa-solid fa-forward-step hover:text-brand-cyan cursor-pointer"></i>
+                                    <i class="fa-solid fa-volume-high hover:text-brand-cyan cursor-pointer"></i>
+                                    <span>04:12 / 08:45</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <i class="fa-solid fa-gear hover:text-brand-cyan cursor-pointer"></i>
+                                    <i class="fa-solid fa-expand hover:text-brand-cyan cursor-pointer"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <p class="text-sm text-slate-400 text-center sm:text-left">To view the complete official catalog and live updates, navigate to YouTube directly.</p>
+                        <a id="modalExternalLink" href="" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-gradient-to-r from-brand-blue to-brand-purple text-white text-xs font-bold tracking-wider uppercase hover:opacity-90 transition-opacity whitespace-nowrap">Open on YouTube <i class="fa-solid fa-up-right-from-square ml-1.5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <section id="social" class="py-24 px-4 sm:px-6 lg:px-8 relative bg-slate-950/40">
+            <!-- Background Elements -->
+            <div class="absolute bottom-0 left-[20%] w-[40%] h-[40%] rounded-full bg-brand-purple/10 blur-[130px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">ENGAGE & FOLLOW</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-display text-white">Social Media Ecosystem</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Three Premium Social Cards with 3D Hover & Direct Hyperlinks -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    
+                    <!-- TikTok Card -->
+                    <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300">
+                        <div class="absolute -top-[10%] -right-[10%] w-24 h-24 bg-white/5 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-tiktok text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-display mb-2">TikTok Channel</h3>
+                        <p class="text-slate-400 text-sm mb-6">Explore my daily bite-sized motivational shorts, trending informative lists, and Oromo creator interactions.</p>
+                        <a href="https://www.tiktok.com/@hachaluroba123" target="_blank" rel="noopener" class="flex items-center justify-between bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl border border-white/5 group/link text-sm font-semibold transition-colors">
+                            <span class="text-white group-hover/link:text-brand-cyan transition-colors">@hachaluroba123</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/link:text-brand-cyan transition-colors"></i>
+                        </a>
+                    </div>
+
+                    <!-- YouTube Card -->
+                    <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:border-red-600/30 transition-all duration-300">
+                        <div class="absolute -top-[10%] -right-[10%] w-24 h-24 bg-[#FF0000]/10 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-youtube text-3xl text-[#FF0000]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-display mb-2">YouTube Hub</h3>
+                        <p class="text-slate-400 text-sm mb-6">Substantive high-definition uploads covering cultural analytics, life motivation guidelines, and detailed study modules.</p>
+                        <a href="https://www.youtube.com/@hachaluroba" target="_blank" rel="noopener" class="flex items-center justify-between bg-[#FF0000]/5 hover:bg-[#FF0000]/10 px-4 py-3 rounded-xl border border-[#FF0000]/10 group/link text-sm font-semibold transition-colors">
+                            <span class="text-white group-hover/link:text-red-500 transition-colors">@hachaluroba</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/link:text-red-500 transition-colors"></i>
+                        </a>
+                    </div>
+
+                    <!-- Telegram Card -->
+                    <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:border-[#26A5E4]/30 transition-all duration-300">
+                        <div class="absolute -top-[10%] -right-[10%] w-24 h-24 bg-[#26A5E4]/10 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-telegram text-3xl text-[#26A5E4]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-display mb-2">Telegram Forum</h3>
+                        <p class="text-slate-400 text-sm mb-6">Join my primary direct news board to access files, resource links, instant updates, and direct creator text logs.</p>
+                        <a href="https://t.me/hachalu122" target="_blank" rel="noopener" class="flex items-center justify-between bg-[#26A5E4]/5 hover:bg-[#26A5E4]/10 px-4 py-3 rounded-xl border border-[#26A5E4]/10 group/link text-sm font-semibold transition-colors">
+                            <span class="text-white group-hover/link:text-[#26A5E4] transition-colors">hachalu122</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/link:text-[#26A5E4] transition-colors"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Three Premium High-Impact Action CTA Buttons -->
+                <div class="bg-gradient-to-tr from-brand-blue/30 via-slate-900 to-brand-purple/30 rounded-3xl p-8 sm:p-12 border border-white/10 text-center relative overflow-hidden">
+                    <h3 class="text-2xl font-bold text-white font-display mb-4">Become Part of the Global Oromo Creator Community</h3>
+                    <p class="text-slate-300 max-w-2xl mx-auto mb-8 text-sm sm:text-base">Click below to follow, subscribe, and join my dynamic network spaces instantly. Connect with over 100K active subscribers globally.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                        <a href="https://www.tiktok.com/@hachaluroba123" target="_blank" rel="noopener" class="bg-black hover:bg-slate-900 border border-white/15 px-6 py-4 rounded-xl font-bold flex items-center justify-center space-x-3 transition-transform duration-200 hover:scale-[1.03] active:scale-95 text-white">
+                            <i class="fa-brands fa-tiktok text-xl text-brand-cyan"></i>
+                            <span>Follow Me on TikTok</span>
+                        </a>
+                        <a href="https://www.youtube.com/@hachaluroba" target="_blank" rel="noopener" class="bg-[#FF0000] hover:bg-[#CC0000] px-6 py-4 rounded-xl font-bold flex items-center justify-center space-x-3 transition-transform duration-200 hover:scale-[1.03] active:scale-95 text-white shadow-lg shadow-red-600/20">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                            <span>Subscribe on YouTube</span>
+                        </a>
+                        <a href="https://t.me/hachalu122" target="_blank" rel="noopener" class="bg-[#26A5E4] hover:bg-[#1C82B6] px-6 py-4 rounded-xl font-bold flex items-center justify-center space-x-3 transition-transform duration-200 hover:scale-[1.03] active:scale-95 text-white shadow-lg shadow-blue-500/20">
+                            <i class="fa-brands fa-telegram text-xl"></i>
+                            <span>Join My Telegram</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">VISUAL MOMENTS</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold font-display text-white">Modern Photo Gallery</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Category Filtering Bar -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+                <button onclick="filterGallery('all')" id="btn-gal-all" class="px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-brand-cyan text-brand-black">All</button>
+                <button onclick="filterGallery('creation')" id="btn-gal-creation" class="px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10">Content Creation</button>
+                <button onclick="filterGallery('lifestyle')" id="btn-gal-lifestyle" class="px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10">Lifestyle</button>
+                <button onclick="filterGallery('community')" id="btn-gal-community" class="px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10">Community</button>
+            </div>
+
+            <!-- Image Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Gallery Card 1 -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="creation" onclick="openLightbox('https://placehold.co/1200x800/12121a/4F46E5?text=Studio+Recording+Production', 'Professional production studio setup with microphone, soundboard, and premium LED layout.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://placehold.co/800x800/12121a/4F46E5?text=Studio+Recording+Setup" alt="Production Setup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <!-- Hover overlay information -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-cyan font-bold uppercase tracking-widest mb-1">Content Creation</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">High-End Sound & Visual Lab</h4>
+                        <p class="text-slate-300 text-xs">A comprehensive view inside the premium creator workstation showing pro-grade LED grids and camera layouts.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 2 -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="lifestyle" onclick="openLightbox('https://placehold.co/1200x800/12121a/9333EA?text=Digital+Nomad+Workspace', 'Exploring mobile creative strategies while writing digital outlines in city hubs.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://placehold.co/800x800/12121a/9333EA?text=Creator+Workspace" alt="Creative Ideation Workspace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-purple font-bold uppercase tracking-widest mb-1">Lifestyle</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">Creative Workspace Setup</h4>
+                        <p class="text-slate-300 text-xs">A view of a modern creator setup featuring laptops, professional lighting, and video editing equipment.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 3 -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="community" onclick="openLightbox('https://placehold.co/1200x800/12121a/06B6D4?text=Community+Fireside+Chat', 'Connecting with creative youth at local hubs to discuss digital literacy and culture.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://placehold.co/800x800/12121a/06B6D4?text=Oromo+Community+Engagement" alt="Community Interaction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-cyan font-bold uppercase tracking-widest mb-1">Community</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">Empowering Digital Thinkers</h4>
+                        <p class="text-slate-300 text-xs">Interactive session details outlining the future of Oromo content creation with aspiring youth.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 4 -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="creation" onclick="openLightbox('https://placehold.co/1200x800/12121a/3B82F6?text=Creative+Camera+Rig', 'Behind the lens capturing modern high-definition motivational stories.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://placehold.co/800x800/12121a/3B82F6?text=Behind+The+Scenes" alt="Production Camera Rig" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-cyan font-bold uppercase tracking-widest mb-1">Content Creation</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">High-Definition Camera Rig</h4>
+                        <p class="text-slate-300 text-xs">Capturing motivational stories and informative videos behind high-end setups.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 5 -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="lifestyle" onclick="openLightbox('https://placehold.co/1200x800/12121a/A855F7?text=Modern+Office+Inspiration', 'Modern environment design focusing on geometric precision and creativity.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="https://placehold.co/800x800/12121a/A855F7?text=Creator+Ambience" alt="Desk Setup Workspace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-purple font-bold uppercase tracking-widest mb-1">Lifestyle</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">Creative Focus Zone</h4>
+                        <p class="text-slate-300 text-xs">Structuring daily concepts inside an environment built for focus and aesthetic excellence.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 6 (Featuring Community and Friends Photo) -->
+                <div class="gallery-card glass-panel rounded-2xl overflow-hidden group relative cursor-pointer" data-category="community" onclick="openLightbox('3d4f9138-8fa3-4e55-8619-89bdcb2a338d_4_watermark.jpg', 'Hachalu Roba celebrating local community and cultural connection with friends.')">
+                    <div class="aspect-square sm:aspect-video lg:aspect-square overflow-hidden">
+                        <img src="3d4f9138-8fa3-4e55-8619-89bdcb2a338d_4_watermark.jpg" alt="Cultural Event and Friends" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-slate-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-brand-cyan font-bold uppercase tracking-widest mb-1">Community</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">Cultural & Social Connections</h4>
+                        <p class="text-slate-300 text-xs">Hachalu Roba with friends sharing beautiful visual moments and expressions of unity.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Gallery Lightbox Modal -->
+        <div id="lightboxModal" class="fixed inset-0 bg-brand-black/95 z-[100] hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+            <div class="absolute top-4 right-4 flex items-center space-x-3 z-[110]">
+                <!-- Rotation controller for sideways photos -->
+                <button onclick="event.stopPropagation(); rotateLightboxImage();" class="bg-white/10 hover:bg-white/20 text-white rounded-full p-2.5 transition-colors cursor-pointer" title="Rotate Image">
+                    <i class="fa-solid fa-rotate-right text-lg"></i>
+                </button>
+                <button onclick="event.stopPropagation(); closeLightbox();" class="bg-white/10 hover:bg-white/20 text-white rounded-full p-2.5 transition-colors cursor-pointer" title="Close">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="max-w-4xl w-full flex flex-col space-y-4" onclick="event.stopPropagation();">
+                <div class="rounded-2xl overflow-hidden border border-white/10 max-h-[70vh] flex items-center justify-center bg-black p-4">
+                    <img id="lightboxImage" src="" alt="Zoomed image content" class="max-w-full max-h-[60vh] object-contain transition-transform duration-300 transform rotate-0">
+                </div>
+                <div class="p-4 bg-brand-dark/90 border border-white/5 rounded-xl">
+                    <p id="lightboxDescription" class="text-slate-300 text-sm text-center">Description text detailing this photography moment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+            
+            <div class="absolute top-1/4 right-[10%] w-[35%] h-[35%] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Details Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-cyan">SEND ME A MESSAGE</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Let's Connect</h3>
+                    <p class="text-slate-300 text-sm sm:text-base">
+                        Have a collaboration idea, sponsorship opportunity, or just want to share feedback? Send me a message directly, and I will get back to you as soon as possible.
+                    </p>
+
+                    <!-- Info Cards -->
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-brand-purple/20 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-cyan flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 uppercase tracking-wider">Email Address</span>
+                                <a href="mailto:contact@hachaluroba.com" class="text-white hover:text-brand-cyan font-medium text-sm">hachaluroba@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-brand-purple/20 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-brand-purple/10 text-brand-purple flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 uppercase tracking-wider">Location Base</span>
+                                <span class="text-white font-medium text-sm">Addis Ababa / Oromia, Ethiopia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Styled Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-6 sm:p-10 rounded-3xl relative">
+                        <!-- Custom Success Notice Container -->
+                        <div id="contactSuccess" class="hidden bg-emerald-950/80 border border-emerald-500/30 p-6 rounded-2xl text-center space-y-3 mb-6 animate-pulse-slow">
+                            <i class="fa-solid fa-circle-check text-4xl text-emerald-400"></i>
+                            <h4 class="text-lg font-bold text-white">Message Sent Successfully!</h4>
+                            <p class="text-slate-300 text-xs">Thank you, your outreach has reached Hachalu's digital pipeline. We will review and reply soon.</p>
+                        </div>
+
+                        <form id="creatorContactForm" onsubmit="handleFormSubmission(event)" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Your Name *</label>
+                                    <input type="text" id="name" required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors" placeholder="e.g. Tolera">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Email Address *</label>
+                                    <input type="email" id="email" required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors" placeholder="e.g. toleratg@gmail.com">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Your Message *</label>
+                                <textarea id="message" required rows="5" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors" placeholder="Write your collaborative proposal or friendly message here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl font-bold tracking-wider uppercase text-white bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-dark/90 border-t border-white/5 py-12 relative overflow-hidden">
+        <!-- Background Glowing Accent lines -->
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-oromoRed"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                
+                <!-- Brand Signature -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-tr from-brand-blue to-brand-purple rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-brand-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v18M12 9c2-2 5-2 5 0s-3 4-5 6M12 9c-2-2-5-2-5 0s3 4 5 6M8 21h8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold font-display tracking-widest text-white">HACHALU ROBA</span>
+                        <span class="text-[9px] uppercase tracking-widest text-brand-cyan">Oromo Content Creator</span>
+                    </div>
+                </div>
+
+                <!-- Horizontal Quick links -->
+                <nav class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-slate-400">
+                    <a href="#home" class="hover:text-brand-cyan transition-colors">Home</a>
+                    <a href="#about" class="hover:text-brand-cyan transition-colors">About</a>
+                    <a href="#videos" class="hover:text-brand-cyan transition-colors">Videos</a>
+                    <a href="#social" class="hover:text-brand-cyan transition-colors">Social</a>
+                    <a href="#gallery" class="hover:text-brand-cyan transition-colors">Gallery</a>
+                </nav>
+
+                <!-- Social Action Quick Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.tiktok.com/@hachaluroba123" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-300 hover:text-brand-cyan transition-colors" title="TikTok">
+                        <i class="fa-brands fa-tiktok text-sm"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@hachaluroba" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-300 hover:text-[#FF0000] transition-colors" title="YouTube">
+                        <i class="fa-brands fa-youtube text-sm"></i>
+                    </a>
+                    <a href="https://t.me/hachalu122" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-300 hover:text-[#26A5E4] transition-colors" title="Telegram">
+                        <i class="fa-brands fa-telegram text-sm"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Copyright and Terms row -->
+            <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/5 text-xs text-slate-500 gap-4 text-center sm:text-left">
+                <p>© 2026 HACHALU ROBA. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <span class="hover:underline cursor-pointer">Privacy Policy</span>
+                    <span class="hover:underline cursor-pointer">Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript Functionality -->
+    <script>
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when links inside are clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Header Scroll Effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-xl', 'bg-brand-dark/95');
+                header.classList.remove('py-0');
+            } else {
+                header.classList.remove('py-3', 'shadow-xl', 'bg-brand-dark/95');
+            }
+        });
+
+        // 3. Tab Navigation Handler for About Section
+        function switchTab(targetTabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.about-tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Show target content
+            document.getElementById(targetTabId).classList.remove('hidden');
+
+            // Reset all buttons to default state
+            const buttons = document.querySelectorAll('#about button');
+            buttons.forEach(btn => {
+                btn.className = "px-5 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-300";
+            });
+
+            // Set active design to the clicked button
+            const activeBtn = document.getElementById(`btn-${targetTabId}`);
+            if (activeBtn) {
+                activeBtn.className = "px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-md";
+            }
+        }
+
+        // 4. Video Mock Lightbox Player Simulation
+        const videoModal = document.getElementById('videoModal');
+        const modalVideoTitle = document.getElementById('modalVideoTitle');
+        const modalExternalLink = document.getElementById('modalExternalLink');
+
+        function playMockVideo(title, link) {
+            modalVideoTitle.innerText = title;
+            modalExternalLink.href = link;
+            videoModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Lock scrolling
+        }
+
+        function closeVideoMock() {
+            videoModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Unlock scrolling
+        }
+
+        // Close modal when background outside is clicked
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoMock();
+            }
+        });
+
+        // 5. Gallery Grid Filter Operations
+        function filterGallery(category) {
+            // Filter elements
+            const cards = document.querySelectorAll('.gallery-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Reset buttons to non-active styles
+            const buttons = document.querySelectorAll('#gallery button');
+            buttons.forEach(btn => {
+                btn.className = "px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10";
+            });
+
+            // Apply active styles to select key
+            const activeBtn = document.getElementById(`btn-gal-${category}`);
+            if (activeBtn) {
+                activeBtn.className = "px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 bg-brand-cyan text-brand-black";
+            }
+        }
+
+        // 6. Photographic Lightbox Controller & Rotation State
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxDescription = document.getElementById('lightboxDescription');
+        let currentRotation = 0;
+
+        function openLightbox(imgSrc, descText) {
+            currentRotation = 0; // Reset rotation state
+            lightboxImage.className = "max-w-full max-h-[60vh] object-contain transition-transform duration-300 transform rotate-0";
+            lightboxImage.src = imgSrc;
+            lightboxDescription.innerText = descText;
+            lightboxModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function rotateLightboxImage() {
+            currentRotation = (currentRotation + 90) % 360;
+            lightboxImage.className = `max-w-full max-h-[60vh] object-contain transition-transform duration-300 transform rotate-${currentRotation}`;
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on key events
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeVideoMock();
+            }
+        });
+
+        // 7. Form Submission & Success Verification System
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            
+            // Collect Form Values
+            const nameValue = document.getElementById('name').value;
+            const emailValue = document.getElementById('email').value;
+            const messageValue = document.getElementById('message').value;
+
+            // Simple validation check
+            if(nameValue && emailValue && messageValue) {
+                // Display custom HTML success notice
+                const successNotice = document.getElementById('contactSuccess');
+                const contactForm = document.getElementById('creatorContactForm');
+                
+                successNotice.classList.remove('hidden');
+                contactForm.reset(); // Clear input elements
+
+                // Hide message notification block smoothly after 7 seconds
+                setTimeout(() => {
+                    successNotice.classList.add('hidden');
+                }, 7000);
+            }
+        }
+
+        // 8. Elegant Dynamic Particles Canvas Initialization
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.speedY = Math.random() * 0.4 - 0.2;
+                this.color = Math.random() > 0.5 ? '#06B6D4' : '#9333EA'; // Cyan or Purple color profile
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                // Wrap screen boundary bounds
+                if (this.x > canvas.width) this.x = 0;
+                else if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                else if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            const count = Math.min(Math.floor(window.innerWidth / 15), 100);
+            for (let i = 0; i < count; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        
+        // Window Load triggers main particle execution
+        window.onload = function() {
+            animateParticles();
+        }
+    </script>
+</body>
+</html>
